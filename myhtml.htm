@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>myHTML</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js" charset="utf-8"></script>
+  </head>
+  <body>
+    <h1>My First HTML</h1>
+    <div class="myFirstClass" ng-app="myApp" ng-controller="myCtrl">
+      Hello World!
+        <p>My First Expression: {{5+5}}</p>
+        <p>My First input: <input type="text" data-ng-model="name" placeholder="Anon"></p>
+        <p> {{name}} </p>
+
+        <!-- init a variable called var, bind val of input to var in app, use var in style attr -->
+        <div class="anotherClass" ng-init="var='lightblue' ">
+            <p> Give me a color!
+              <br>
+              <input style="background-color:{{var}}" ng-model="var"> <!-- input a color -->
+            </p>
+        </div>
+
+    </div>
+
+
+    <script>
+      var app = angular.module('myApp',[]);
+      app.controller('myCtrl',function($scope) {
+        $scope.name="John";
+      });
+    </script>
+
+  </body>
+
+
+
+</html>
