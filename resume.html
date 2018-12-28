@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>myHTML</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js" charset="utf-8"></script>
+    <!-- Link to a Cascading stylesheet called mystyles -->
+    <link rel="stylesheet" href="mystyles.css">
+  </head>
+
+  <body ng-app="myApp" ng-controller="myCtrl">
+    <a href=""></a>
+    <h1>Yesu Carter</h1>
+    <div class="myFirstClass" >
+
+      <h2>Education</h2>
+
+        <span>Colgate University, Hamilton, NY </span>
+        <span class="date"> August 2015 - May 2019 </span>
+        <ul class="bullets">
+          <li data-ng-model="gpa" > Current GPA: {{gpa}}/4.0 </li>
+          <li data-ng-init="major='Double Major, Computer Science and Japanese Language'" data-ng-model="major"> {{major}} </li>
+        </ul>
+
+      <h2>Technical Knowledge</h2>
+      <!-- init an array of Frameworks, assign them to a var and display them using only one line -->
+        <div data-ng-init="fworks=[
+                                  {name:'Ruby-On-Rails', exp:'2 years'},
+                                  {name:'AngularJS', exp:'1 year'}]">
+          Frameworks and Experience:
+          <ul class="bullets" data-ng-repeat="x in fworks">
+            <li> {{x.name + ' - ' + x.exp}} </li>
+          </ul>
+        </div>
+
+
+
+
+      <p>My First input: <input type="text" data-ng-model="name" placeholder="Anon"></p>
+      <p> {{name}} </p>
+
+
+      <!-- init a variable called var, bind val of input to var in app, use var in style attr -->
+      <div class="anotherClass" ng-init="var='lightblue' ">
+          <p> Give me a color!
+            <br>
+            <input style="background-color:{{var}}" ng-model="var"> <!-- input a color -->
+          </p>
+      </div>
+
+      <div mydirective></div>
+      <br>
+      <div class="calc" data-ng-init="year=1998">
+        I can tell how old you are!
+        <div>
+          Year of Birth: <input type="number" data-ng-model="year">
+        </div>
+        <div>
+          Your Age: {{2018-year}}
+        </div>
+      </div>
+
+    </div>
+
+    <script src="myApp.js" charset="utf-8"></script>
+    <script src="myCtrl.js" charset="utf-8"></script>
+
+    <script>
+      app.directive("mydirective",function() {
+        return {
+          template : "I was made in a directive constructor!"
+        }
+      });
+    </script>
+
+  </body>
+
+
+
+</html>
