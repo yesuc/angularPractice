@@ -9,7 +9,10 @@
   </head>
 
   <body ng-app="myApp" ng-controller="myCtrl">
-    <a href=""></a>
+
+    <a href="home.html">Home</a>
+    <a href="contact.html">Contact Me!</a>
+
     <h1>Yesu Carter</h1>
     <div class="myFirstClass" >
 
@@ -19,20 +22,30 @@
         <span class="date"> August 2015 - May 2019 </span>
         <ul class="bullets">
           <li data-ng-model="gpa" > Current GPA: {{gpa}}/4.0 </li>
-          <li data-ng-init="major='Double Major, Computer Science and Japanese Language'" data-ng-model="major"> {{major}} </li>
+          <li data-ng-init="major='Double Major: Computer Science and Japanese Language'" data-ng-model="major"> {{major}} </li>
+          <li> Dean's Award For Academic Excellence
+            <span class="date"> All Semesters </span>
+          </li>
         </ul>
 
       <h2>Technical Knowledge</h2>
       <!-- init an array of Frameworks, assign them to a var and display them using only one line -->
-        <div data-ng-init="fworks=[
+        <div class="frameworks" data-ng-init="fworks=[
                                   {name:'Ruby-On-Rails', exp:'2 years'},
-                                  {name:'AngularJS', exp:'1 year'}]">
+                                  {name:'AngularJS', exp:'1 year'}
+                                  ]">
           Frameworks and Experience:
           <ul class="bullets" data-ng-repeat="x in fworks">
             <li> {{x.name + ' - ' + x.exp}} </li>
           </ul>
         </div>
 
+        <div class="plangs">
+            Languages:
+            <ul class="bullets" data-ng-repeat="x in pLangList">
+              <li> {{x.name}} </li>
+            </ul>
+        </div>
 
 
 

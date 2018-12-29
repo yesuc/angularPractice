@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+
+    <meta charset="utf-8">
+    <title>Home Page</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js" charset="utf-8"></script>
+    <!-- Link to a Cascading stylesheet called mystyles -->
+    <link rel="stylesheet" href="mystyles.css">
+  </head>
+
+  <body data-ng-app="myApp" data-ng-controller="myCtrl">
+    <h1>Contact Info</h1>
+    ycarter@colgate.edu
+
+    <form class="contactForm" action="index.html" method="get">
+      <!-- Variable Name is requestorEmail, but ng-model states it is of type text -->
+      <input type="email" name="requestorEmail" data-ng-model="text">
+      <span ng-show="contactForm.requestorEmail.$error.email">Please Submit a Valid Email Address</span>
+    </form>
+
+
+    <script src="myApp.js" charset="utf-8"></script>
+    <script src="myCtrl.js" charset="utf-8"></script>
+  </body>
+
+
+
+</html>
