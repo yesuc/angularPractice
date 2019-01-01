@@ -1,0 +1,27 @@
+.navbar ul {
+  background-color: #0759bf;
+
+  list-style-type: none;
+  overflow: hidden;
+
+  margin: 0;
+  padding: 0;
+}
+.navbar li a {
+  color: white;
+  padding: 14px 16px;
+  display: block;
+}
+
+.navbar li {
+  float: left;
+}
+
+.img_container {
+  margin: auto;
+}
+.img_container img {
+  float: left;
+  height: 250px;
+  width: auto;
+}

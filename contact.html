@@ -4,9 +4,12 @@
 
     <meta charset="utf-8">
     <title>Home Page</title>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js" charset="utf-8"></script>
+    <!-- AngularJS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script>
+
     <!-- Link to a Cascading stylesheet called mystyles -->
-    <link rel="stylesheet" href="mystyles.css">
+    <link rel="stylesheet" href="stylesheets/mystyles.css">
   </head>
 
   <body data-ng-app="myApp" data-ng-controller="myCtrl">
@@ -18,6 +21,10 @@
       <input type="email" name="requestorEmail" data-ng-model="text">
       <span ng-show="contactForm.requestorEmail.$error.email">Please Submit a Valid Email Address</span>
     </form>
+
+    <div class="ng-view">
+
+    </div>
 
 
     <script src="myApp.js" charset="utf-8"></script>
