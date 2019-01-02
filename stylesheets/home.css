@@ -1,3 +1,10 @@
+body {
+  background-color: #8abdce;
+  margin: 0;
+}
+h1 {
+  padding-left: 10px;
+}
 .navbar ul {
   background-color: #0759bf;
 
@@ -17,11 +24,18 @@
   float: left;
 }
 
-.img_container {
-  margin: auto;
+.profile_container {
+  padding: 10px;
+  height: 400px;
+  width: 292px;
+  border-style: solid;
+
 }
-.img_container img {
+.profile_container img {
   float: left;
   height: 250px;
   width: auto;
+}
+.profile_description {
+  font-size: 105%;
 }
