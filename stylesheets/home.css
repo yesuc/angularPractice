@@ -1,27 +1,10 @@
-body {
+.main_container {
   background-color: #8abdce;
   margin: 0;
 }
+
 h1 {
   padding-left: 10px;
-}
-.navbar ul {
-  background-color: #0759bf;
-
-  list-style-type: none;
-  overflow: hidden;
-
-  margin: 0;
-  padding: 0;
-}
-.navbar li a {
-  color: white;
-  padding: 14px 16px;
-  display: block;
-}
-
-.navbar li {
-  float: left;
 }
 
 .profile_container {
@@ -29,13 +12,38 @@ h1 {
   height: 350px;
   width: 292px;
   border-style: solid;
-
+  display: inline-block;
+  float: left;
 }
 .profile_container img {
   float: left;
   height: 250px;
   width: auto;
 }
+.profile_contact {
+  font-size: 15px;
+}
+
 .profile_description {
+  font-size: 17px;
+  display: initial;
+}
+
+.info_container {
+ width: auto;
+ padding-left: 10px;
+ padding-right: 10px;
+ overflow: hidden;
+ float: none;
+}
+
+.description_header {
   font-size: 105%;
+  padding-top: 5px;
+}
+
+.description {
+  text-align: left;
+  font-size: 15px;
+  margin-bottom: 5px;
 }

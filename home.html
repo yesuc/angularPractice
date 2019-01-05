@@ -13,6 +13,8 @@
 
     <!-- Link to a Cascading stylesheet called mystyles -->
     <link rel="stylesheet" href="stylesheets/home.css">
+    <link rel="stylesheet" href="stylesheets/navbar.css">
+
   </head>
 
   <body data-ng-app="myApp" data-ng-controller="myCtrl">
@@ -22,28 +24,45 @@
     <!-- Site Navigation Bar -->
     <nav class="navbar">
       <ul>
-        <li> <a href="#!home"> Home </a> </li>
-        <li> <a href="#!resume"> My Resume</a> </li>
-        <li> <a href="#!contact"> Contact Me!</a> </li>
+        <li> <a href="home.html"> Home </a> </li>
+        <li> <a href="resume.html"> My Resume</a> </li>
+        <li> <a href="contact.html"> Contact Me!</a> </li>
       </ul>
     </nav>
 
+    <span class="main_container">
 
     <!-- Profile Image and Short Description -->
     <div class="profile_container">
       <img src="images/profile_image.jpg" alt="Yesu Carter">
-      <div class="profile_description">
-        Computer Science and Japanese Undergraduate at Colgate University
-      </div>
-      <div class="profile_contact">
-        Schenectady, NY
-      </div>
+      <div class="profile_description"> '19 Computer Science and Japanese Undergraduate at Colgate University </div>
+      <div class="profile_contact"> Schenectady, NY </div>
       <div class="profile_contact">
         ycarter@colgate.edu
       </div>
     </div>
 
-    
+    <!-- Current Projects and More Information -->
+    <div class="info_container">
+
+      <div class="description_header"> Interests </div>
+      <hr>
+      <div class="description">
+        Web Application and Software Development that has direct impact on clients.
+      </div>
+
+      <div class="description_header"> Current Projects </div>
+      <hr>
+      <div class="description" data-ng-repeat="x in current_projects"> {{x.name + " - " + x.desc}} </div>
+
+      <div class="description_header"> Recent Projects </div>
+      <hr>
+      <div class="description">
+
+      </div>
+    </div>
+
+  </span>
 
     <script src="myApp.js" charset="utf-8"></script>
     <script src="myCtrl.js" charset="utf-8"></script>

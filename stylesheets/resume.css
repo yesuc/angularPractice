@@ -1,3 +1,11 @@
+.container{
+  background-color: #8abdce;
+  margin: 0;
+  padding-left: 10px;
+}
+h1 {
+  padding-left: 10px;
+}
 span.date {
   position: absolute;
   right: 5pt;
